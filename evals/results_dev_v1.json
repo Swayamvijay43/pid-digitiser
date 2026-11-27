@@ -1,0 +1,442 @@
+[
+ {
+  "variant": "vector",
+  "sheets": 15,
+  "detection": {
+   "precision": 0.960431654676259,
+   "recall": 1.0,
+   "tp": 534,
+   "fp": 22,
+   "fn": 0,
+   "class_errors": 0,
+   "per_class_recall": {
+    "gate_valve": 1.0,
+    "globe_valve": 1.0,
+    "check_valve": 1.0,
+    "control_valve": 1.0,
+    "centrifugal_pump": 1.0,
+    "heat_exchanger": 1.0,
+    "vessel": 1.0,
+    "instrument_field": 1.0,
+    "instrument_panel": 1.0
+   }
+  },
+  "deskew_mae_deg": null,
+  "tags": {
+   "gt_tagged_matched": 534,
+   "auto_accepted": 533,
+   "auto_correct": 533,
+   "auto_precision": 1.0,
+   "review": 23,
+   "review_rate": 0.04136690647482014,
+   "automation_rate": 0.9586330935251799,
+   "review_best_guess_correct": 0,
+   "by_rung": {
+    "text_layer": {
+     "accepted": 533,
+     "correct": 533
+    }
+   }
+  },
+  "line_number_accuracy": 1.0,
+  "mto_exact_sheets": 15,
+  "seconds_per_sheet": 29.128528300000045,
+  "failures": [
+   {
+    "sheet": "test-011",
+    "kind": "sent to review",
+    "cls": "vessel",
+    "gt": "V-218",
+    "guess": null,
+    "reason": "no tag found by OCR or either VLM",
+    "attempts": [
+     {
+      "rung": "ocr",
+      "raw": null,
+      "tag": null
+     },
+     {
+      "rung": "vlm_small",
+      "raw": "{\"tag\": null, \"legible\": false}",
+      "tag": null
+     },
+     {
+      "rung": "vlm_large",
+      "raw": "{\"tag\": null, \"legible\": false}",
+      "tag": null
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "variant": "scanned",
+  "sheets": 15,
+  "detection": {
+   "precision": 0.9621621621621622,
+   "recall": 1.0,
+   "tp": 534,
+   "fp": 21,
+   "fn": 0,
+   "class_errors": 0,
+   "per_class_recall": {
+    "gate_valve": 1.0,
+    "globe_valve": 1.0,
+    "check_valve": 1.0,
+    "control_valve": 1.0,
+    "centrifugal_pump": 1.0,
+    "heat_exchanger": 1.0,
+    "vessel": 1.0,
+    "instrument_field": 1.0,
+    "instrument_panel": 1.0
+   }
+  },
+  "deskew_mae_deg": 0.03219999999999998,
+  "tags": {
+   "gt_tagged_matched": 534,
+   "auto_accepted": 522,
+   "auto_correct": 521,
+   "auto_precision": 0.9980842911877394,
+   "review": 33,
+   "review_rate": 0.05945945945945946,
+   "automation_rate": 0.9405405405405406,
+   "review_best_guess_correct": 3,
+   "by_rung": {
+    "ocr": {
+     "accepted": 504,
+     "correct": 503
+    },
+    "vlm_large": {
+     "accepted": 14,
+     "correct": 14
+    },
+    "vlm_small": {
+     "accepted": 4,
+     "correct": 4
+    }
+   }
+  },
+  "line_number_accuracy": 0.8558282208588958,
+  "mto_exact_sheets": 10,
+  "seconds_per_sheet": 70.45864020666662,
+  "failures": [
+   {
+    "sheet": "test-000",
+    "kind": "sent to review",
+    "cls": "instrument_field",
+    "gt": "PIC-530",
+    "guess": "PIC-830",
+    "reason": "readings disagree: ocr=PIC, vlm_small=PIC30, vlm_large=PIC-830",
+    "attempts": [
+     {
+      "rung": "ocr",
+      "raw": "PIC",
+      "tag": "PIC"
+     },
+     {
+      "rung": "vlm_small",
+      "raw": "{\"tag\": \"PIC30\", \"legible\": true}",
+      "tag": "PIC30"
+     },
+     {
+      "rung": "vlm_large",
+      "raw": "{\"tag\": \"PIC830\", \"legible\": true}",
+      "tag": "PIC-830"
+     }
+    ]
+   },
+   {
+    "sheet": "test-003",
+    "kind": "sent to review",
+    "cls": "instrument_field",
+    "gt": "FI-856",
+    "guess": null,
+    "reason": "no reading passes the tag grammar",
+    "attempts": [
+     {
+      "rung": "ocr",
+      "raw": "F-856",
+      "tag": "F-856"
+     },
+     {
+      "rung": "vlm_small",
+      "raw": "{\"tag\": \"F856\", \"legible\": true}",
+      "tag": "F-856"
+     },
+     {
+      "rung": "vlm_large",
+      "raw": "",
+      "tag": null
+     }
+    ]
+   },
+   {
+    "sheet": "test-003",
+    "kind": "sent to review",
+    "cls": "instrument_field",
+    "gt": "LIC-389",
+    "guess": "LC-389",
+    "reason": "readings disagree: ocr=UC-686, vlm_small=UC-389, vlm_large=LC-389",
+    "attempts": [
+     {
+      "rung": "ocr",
+      "raw": "UC-686",
+      "tag": "UC-686"
+     },
+     {
+      "rung": "vlm_small",
+      "raw": "{\"tag\": \"UC389\", \"legible\": true}",
+      "tag": "UC-389"
+     },
+     {
+      "rung": "vlm_large",
+      "raw": "{\"tag\": \"LC389\", \"legible\": true}",
+      "tag": "LC-389"
+     }
+    ]
+   },
+   {
+    "sheet": "test-004",
+    "kind": "sent to review",
+    "cls": "instrument_field",
+    "gt": "TI-961",
+    "guess": null,
+    "reason": "no reading passes the tag grammar",
+    "attempts": [
+     {
+      "rung": "ocr",
+      "raw": "961",
+      "tag": "961"
+     },
+     {
+      "rung": "vlm_small",
+      "raw": "",
+      "tag": null
+     },
+     {
+      "rung": "vlm_large",
+      "raw": "",
+      "tag": null
+     }
+    ]
+   },
+   {
+    "sheet": "test-007",
+    "kind": "sent to review",
+    "cls": "instrument_field",
+    "gt": "TT-639",
+    "guess": "TT-638",
+    "reason": "readings disagree: ocr=TT-639, vlm_large=TT-638",
+    "attempts": [
+     {
+      "rung": "ocr",
+      "raw": "TT-639",
+      "tag": "TT-639"
+     },
+     {
+      "rung": "vlm_small",
+      "raw": "",
+      "tag": null
+     },
+     {
+      "rung": "vlm_large",
+      "raw": "{\"tag\": \"TT638\", \"legible\": true}",
+      "tag": "TT-638"
+     }
+    ]
+   },
+   {
+    "sheet": "test-007",
+    "kind": "wrong auto-accept",
+    "cls": "instrument_panel",
+    "gt": "LIC-932",
+    "pred": "LUC-932",
+    "by": "ocr",
+    "attempts": [
+     {
+      "rung": "ocr",
+      "raw": "LUC-932",
+      "tag": "LUC-932",
+      "valid": true,
+      "score": 0.8509437243143717
+     }
+    ]
+   },
+   {
+    "sheet": "test-007",
+    "kind": "sent to review",
+    "cls": "instrument_field",
+    "gt": "FI-579",
+    "guess": "FI-570",
+    "reason": "readings disagree: ocr=579, vlm_large=FI-570",
+    "attempts": [
+     {
+      "rung": "ocr",
+      "raw": "579",
+      "tag": "579"
+     },
+     {
+      "rung": "vlm_small",
+      "raw": "",
+      "tag": null
+     },
+     {
+      "rung": "vlm_large",
+      "raw": "{\"tag\": \"FI570\", \"legible\": true}",
+      "tag": "FI-570"
+     }
+    ]
+   },
+   {
+    "sheet": "test-008",
+    "kind": "sent to review",
+    "cls": "instrument_field",
+    "gt": "TI-795",
+    "guess": "TI-798",
+    "reason": "readings disagree: ocr=795, vlm_small=PI-798, vlm_large=TI-798",
+    "attempts": [
+     {
+      "rung": "ocr",
+      "raw": "795",
+      "tag": "795"
+     },
+     {
+      "rung": "vlm_small",
+      "raw": "{\"tag\": \"PI-798\", \"legible\": true}",
+      "tag": "PI-798"
+     },
+     {
+      "rung": "vlm_large",
+      "raw": "{\"tag\": \"TI798\", \"legible\": true}",
+      "tag": "TI-798"
+     }
+    ]
+   },
+   {
+    "sheet": "test-011",
+    "kind": "sent to review",
+    "cls": "instrument_field",
+    "gt": "FI-904",
+    "guess": null,
+    "reason": "no reading passes the tag grammar",
+    "attempts": [
+     {
+      "rung": "ocr",
+      "raw": "\u6708-904",
+      "tag": "\u6708-904"
+     },
+     {
+      "rung": "vlm_small",
+      "raw": "",
+      "tag": null
+     },
+     {
+      "rung": "vlm_large",
+      "raw": "",
+      "tag": null
+     }
+    ]
+   },
+   {
+    "sheet": "test-011",
+    "kind": "sent to review",
+    "cls": "vessel",
+    "gt": "V-218",
+    "guess": null,
+    "reason": "no tag found by OCR or either VLM",
+    "attempts": [
+     {
+      "rung": "ocr",
+      "raw": null,
+      "tag": null
+     },
+     {
+      "rung": "vlm_small",
+      "raw": "{\"tag\": null, \"legible\": false}",
+      "tag": null
+     },
+     {
+      "rung": "vlm_large",
+      "raw": "{\"tag\": null, \"legible\": false}",
+      "tag": null
+     }
+    ]
+   },
+   {
+    "sheet": "test-013",
+    "kind": "sent to review",
+    "cls": "instrument_field",
+    "gt": "TT-213",
+    "guess": "TT-213",
+    "reason": "readings disagree: ocr=213, vlm_large=TT-213",
+    "attempts": [
+     {
+      "rung": "ocr",
+      "raw": "213",
+      "tag": "213"
+     },
+     {
+      "rung": "vlm_small",
+      "raw": "",
+      "tag": null
+     },
+     {
+      "rung": "vlm_large",
+      "raw": "{\"tag\": \"TT-213\", \"legible\": true}",
+      "tag": "TT-213"
+     }
+    ]
+   },
+   {
+    "sheet": "test-014",
+    "kind": "sent to review",
+    "cls": "instrument_field",
+    "gt": "FI-185",
+    "guess": "FI-185",
+    "reason": "readings disagree: ocr=FI-185, vlm_small=F-1185",
+    "attempts": [
+     {
+      "rung": "ocr",
+      "raw": "FI-185",
+      "tag": "FI-185"
+     },
+     {
+      "rung": "vlm_small",
+      "raw": "{\"tag\": \"F1 185\", \"legible\": true}",
+      "tag": "F-1185"
+     },
+     {
+      "rung": "vlm_large",
+      "raw": "",
+      "tag": null
+     }
+    ]
+   },
+   {
+    "sheet": "test-014",
+    "kind": "sent to review",
+    "cls": "instrument_field",
+    "gt": "TT-850",
+    "guess": "TT-850",
+    "reason": "readings disagree: ocr=L-850, vlm_large=TT-850",
+    "attempts": [
+     {
+      "rung": "ocr",
+      "raw": "L-850",
+      "tag": "L-850"
+     },
+     {
+      "rung": "vlm_small",
+      "raw": "",
+      "tag": null
+     },
+     {
+      "rung": "vlm_large",
+      "raw": "{\"tag\": \"TT-850\", \"legible\": true}",
+      "tag": "TT-850"
+     }
+    ]
+   }
+  ]
+ }
+]

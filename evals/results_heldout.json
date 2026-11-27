@@ -1,0 +1,517 @@
+[
+ {
+  "variant": "vector",
+  "sheets": 15,
+  "detection": {
+   "precision": 0.9856887298747764,
+   "recall": 1.0,
+   "tp": 551,
+   "fp": 8,
+   "fn": 0,
+   "class_errors": 0,
+   "per_class_recall": {
+    "gate_valve": 1.0,
+    "globe_valve": 1.0,
+    "check_valve": 1.0,
+    "control_valve": 1.0,
+    "centrifugal_pump": 1.0,
+    "heat_exchanger": 1.0,
+    "vessel": 1.0,
+    "instrument_field": 1.0,
+    "instrument_panel": 1.0
+   }
+  },
+  "deskew_mae_deg": null,
+  "tags": {
+   "gt_tagged_matched": 551,
+   "auto_accepted": 549,
+   "auto_correct": 549,
+   "auto_precision": 1.0,
+   "review": 10,
+   "review_rate": 0.017889087656529516,
+   "automation_rate": 0.9821109123434705,
+   "review_best_guess_correct": 0,
+   "by_rung": {
+    "text_layer": {
+     "accepted": 549,
+     "correct": 549
+    }
+   }
+  },
+  "line_number_accuracy": 1.0,
+  "mto_exact_sheets": 15,
+  "seconds_per_sheet": 14.302193066666344,
+  "failures": [
+   {
+    "sheet": "test-016",
+    "kind": "sent to review",
+    "cls": "vessel",
+    "gt": "V-962",
+    "guess": null,
+    "reason": "no tag found by OCR or either VLM",
+    "attempts": [
+     {
+      "rung": "ocr",
+      "raw": null,
+      "tag": null
+     },
+     {
+      "rung": "vlm_small",
+      "raw": "{\"tag\": null, \"legible\": false}",
+      "tag": null
+     },
+     {
+      "rung": "vlm_large",
+      "raw": "{\"tag\": null, \"legible\": false}",
+      "tag": null
+     }
+    ]
+   },
+   {
+    "sheet": "test-016",
+    "kind": "sent to review",
+    "cls": "vessel",
+    "gt": "V-598",
+    "guess": null,
+    "reason": "no tag found by OCR or either VLM",
+    "attempts": [
+     {
+      "rung": "ocr",
+      "raw": null,
+      "tag": null
+     },
+     {
+      "rung": "vlm_small",
+      "raw": "{\"tag\": null, \"legible\": false}",
+      "tag": null
+     },
+     {
+      "rung": "vlm_large",
+      "raw": "{\"tag\": null, \"legible\": false}",
+      "tag": null
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "variant": "scanned",
+  "sheets": 15,
+  "detection": {
+   "precision": 0.9786856127886323,
+   "recall": 1.0,
+   "tp": 551,
+   "fp": 12,
+   "fn": 0,
+   "class_errors": 0,
+   "per_class_recall": {
+    "gate_valve": 1.0,
+    "globe_valve": 1.0,
+    "check_valve": 1.0,
+    "control_valve": 1.0,
+    "centrifugal_pump": 1.0,
+    "heat_exchanger": 1.0,
+    "vessel": 1.0,
+    "instrument_field": 1.0,
+    "instrument_panel": 1.0
+   }
+  },
+  "deskew_mae_deg": 0.03113333333333336,
+  "tags": {
+   "gt_tagged_matched": 551,
+   "auto_accepted": 537,
+   "auto_correct": 536,
+   "auto_precision": 0.9981378026070763,
+   "review": 26,
+   "review_rate": 0.046181172291296625,
+   "automation_rate": 0.9538188277087034,
+   "review_best_guess_correct": 9,
+   "by_rung": {
+    "ocr": {
+     "accepted": 523,
+     "correct": 522
+    },
+    "vlm_large": {
+     "accepted": 10,
+     "correct": 10
+    },
+    "vlm_small": {
+     "accepted": 4,
+     "correct": 4
+    }
+   }
+  },
+  "line_number_accuracy": 0.9142857142857143,
+  "mto_exact_sheets": 11,
+  "seconds_per_sheet": 62.45473182000011,
+  "failures": [
+   {
+    "sheet": "test-015",
+    "kind": "sent to review",
+    "cls": "instrument_field",
+    "gt": "TT-367",
+    "guess": "TT-367",
+    "reason": "readings disagree: ocr=LI-367, vlm_large=TT-367",
+    "attempts": [
+     {
+      "rung": "ocr",
+      "raw": "L1-367",
+      "tag": "LI-367"
+     },
+     {
+      "rung": "vlm_small",
+      "raw": "",
+      "tag": null
+     },
+     {
+      "rung": "vlm_large",
+      "raw": "{\"tag\": \"TT-367\", \"legible\": true}",
+      "tag": "TT-367"
+     }
+    ]
+   },
+   {
+    "sheet": "test-016",
+    "kind": "sent to review",
+    "cls": "vessel",
+    "gt": "V-962",
+    "guess": null,
+    "reason": "no tag found by OCR or either VLM",
+    "attempts": [
+     {
+      "rung": "ocr",
+      "raw": null,
+      "tag": null
+     },
+     {
+      "rung": "vlm_small",
+      "raw": "{\"tag\": null, \"legible\": false}",
+      "tag": null
+     },
+     {
+      "rung": "vlm_large",
+      "raw": "{\"tag\": null, \"legible\": false}",
+      "tag": null
+     }
+    ]
+   },
+   {
+    "sheet": "test-017",
+    "kind": "sent to review",
+    "cls": "instrument_panel",
+    "gt": "LIC-399",
+    "guess": "LIC-399",
+    "reason": "readings disagree: ocr=LIC, vlm_large=LIC-399",
+    "attempts": [
+     {
+      "rung": "ocr",
+      "raw": "LIC",
+      "tag": "LIC"
+     },
+     {
+      "rung": "vlm_small",
+      "raw": "",
+      "tag": null
+     },
+     {
+      "rung": "vlm_large",
+      "raw": "{\"tag\": \"LIC-399\", \"legible\": true}",
+      "tag": "LIC-399"
+     }
+    ]
+   },
+   {
+    "sheet": "test-018",
+    "kind": "sent to review",
+    "cls": "instrument_field",
+    "gt": "FI-998",
+    "guess": "FI-998",
+    "reason": "readings disagree: ocr=998, vlm_large=FI-998",
+    "attempts": [
+     {
+      "rung": "ocr",
+      "raw": "998",
+      "tag": "998"
+     },
+     {
+      "rung": "vlm_small",
+      "raw": "",
+      "tag": null
+     },
+     {
+      "rung": "vlm_large",
+      "raw": "{\"tag\": \"FI-998\", \"legible\": true}",
+      "tag": "FI-998"
+     }
+    ]
+   },
+   {
+    "sheet": "test-018",
+    "kind": "sent to review",
+    "cls": "instrument_panel",
+    "gt": "LIC-879",
+    "guess": "LIC-879",
+    "reason": "readings disagree: ocr=LIC-879, vlm_small=LC-879, vlm_large=LC-876",
+    "attempts": [
+     {
+      "rung": "ocr",
+      "raw": "LIC-879",
+      "tag": "LIC-879"
+     },
+     {
+      "rung": "vlm_small",
+      "raw": "{\"tag\": \"LC879\", \"legible\": true}",
+      "tag": "LC-879"
+     },
+     {
+      "rung": "vlm_large",
+      "raw": "{\"tag\": \"LC-876\", \"legible\": true}",
+      "tag": "LC-876"
+     }
+    ]
+   },
+   {
+    "sheet": "test-019",
+    "kind": "sent to review",
+    "cls": "instrument_field",
+    "gt": "LIC-824",
+    "guess": "LIC-824",
+    "reason": "readings disagree: ocr=LIC-824, vlm_small=UC-024, vlm_large=LC-824",
+    "attempts": [
+     {
+      "rung": "ocr",
+      "raw": "LIC-824",
+      "tag": "LIC-824"
+     },
+     {
+      "rung": "vlm_small",
+      "raw": "{\"tag\": \"UC024\", \"legible\": true}",
+      "tag": "UC-024"
+     },
+     {
+      "rung": "vlm_large",
+      "raw": "{\"tag\": \"LC824\", \"legible\": true}",
+      "tag": "LC-824"
+     }
+    ]
+   },
+   {
+    "sheet": "test-020",
+    "kind": "wrong auto-accept",
+    "cls": "instrument_field",
+    "gt": "TE-909",
+    "pred": "TE-606",
+    "by": "ocr",
+    "attempts": [
+     {
+      "rung": "ocr",
+      "raw": "TE-606",
+      "tag": "TE-606",
+      "valid": true,
+      "score": 0.9955907166004181
+     }
+    ]
+   },
+   {
+    "sheet": "test-021",
+    "kind": "sent to review",
+    "cls": "instrument_panel",
+    "gt": "LIC-631",
+    "guess": null,
+    "reason": "no reading passes the tag grammar",
+    "attempts": [
+     {
+      "rung": "ocr",
+      "raw": "LUC-631",
+      "tag": "LUC-631"
+     },
+     {
+      "rung": "vlm_small",
+      "raw": "",
+      "tag": null
+     },
+     {
+      "rung": "vlm_large",
+      "raw": "{\"tag\": \"LC-631\", \"legible\": true}",
+      "tag": "LC-631"
+     }
+    ]
+   },
+   {
+    "sheet": "test-022",
+    "kind": "sent to review",
+    "cls": "instrument_field",
+    "gt": "TT-894",
+    "guess": "TT-894",
+    "reason": "readings disagree: ocr=TT-894",
+    "attempts": [
+     {
+      "rung": "ocr",
+      "raw": "TT-894",
+      "tag": "TT-894"
+     },
+     {
+      "rung": "vlm_small",
+      "raw": "",
+      "tag": null
+     },
+     {
+      "rung": "vlm_large",
+      "raw": "",
+      "tag": null
+     }
+    ]
+   },
+   {
+    "sheet": "test-025",
+    "kind": "sent to review",
+    "cls": "instrument_panel",
+    "gt": "TIC-496",
+    "guess": "FIC-496",
+    "reason": "readings disagree: ocr=496, vlm_large=FIC-496",
+    "attempts": [
+     {
+      "rung": "ocr",
+      "raw": "496",
+      "tag": "496"
+     },
+     {
+      "rung": "vlm_small",
+      "raw": "",
+      "tag": null
+     },
+     {
+      "rung": "vlm_large",
+      "raw": "{\"tag\": \"FIC-496\", \"legible\": true}",
+      "tag": "FIC-496"
+     }
+    ]
+   },
+   {
+    "sheet": "test-027",
+    "kind": "sent to review",
+    "cls": "instrument_panel",
+    "gt": "LIC-263",
+    "guess": "LIC-263",
+    "reason": "readings disagree: ocr=LIC-263, vlm_small=UC-263, vlm_large=LC-263",
+    "attempts": [
+     {
+      "rung": "ocr",
+      "raw": "LIC-263",
+      "tag": "LIC-263"
+     },
+     {
+      "rung": "vlm_small",
+      "raw": "{\"tag\": \"UC263\", \"legible\": true}",
+      "tag": "UC-263"
+     },
+     {
+      "rung": "vlm_large",
+      "raw": "{\"tag\": \"LC-263\", \"legible\": true}",
+      "tag": "LC-263"
+     }
+    ]
+   },
+   {
+    "sheet": "test-029",
+    "kind": "sent to review",
+    "cls": "instrument_field",
+    "gt": "PIC-970",
+    "guess": "PIC-970",
+    "reason": "readings disagree: ocr=PIC, vlm_large=PIC-970",
+    "attempts": [
+     {
+      "rung": "ocr",
+      "raw": "PIC",
+      "tag": "PIC"
+     },
+     {
+      "rung": "vlm_small",
+      "raw": "",
+      "tag": null
+     },
+     {
+      "rung": "vlm_large",
+      "raw": "{\"tag\": \"PIC 970\", \"legible\": true}",
+      "tag": "PIC-970"
+     }
+    ]
+   },
+   {
+    "sheet": "test-029",
+    "kind": "sent to review",
+    "cls": "instrument_field",
+    "gt": "TI-585",
+    "guess": null,
+    "reason": "no reading passes the tag grammar",
+    "attempts": [
+     {
+      "rung": "ocr",
+      "raw": "T-585",
+      "tag": "T-585"
+     },
+     {
+      "rung": "vlm_small",
+      "raw": "",
+      "tag": null
+     },
+     {
+      "rung": "vlm_large",
+      "raw": "",
+      "tag": null
+     }
+    ]
+   },
+   {
+    "sheet": "test-029",
+    "kind": "sent to review",
+    "cls": "instrument_field",
+    "gt": "TT-620",
+    "guess": "TT-020",
+    "reason": "readings disagree: ocr=620, vlm_small=TT-020",
+    "attempts": [
+     {
+      "rung": "ocr",
+      "raw": "620",
+      "tag": "620"
+     },
+     {
+      "rung": "vlm_small",
+      "raw": "{\"tag\": \"TT-020\", \"legible\": true}",
+      "tag": "TT-020"
+     },
+     {
+      "rung": "vlm_large",
+      "raw": "",
+      "tag": null
+     }
+    ]
+   },
+   {
+    "sheet": "test-029",
+    "kind": "sent to review",
+    "cls": "instrument_field",
+    "gt": "TI-183",
+    "guess": "TI-183",
+    "reason": "readings disagree: ocr=183, vlm_small=PI-183, vlm_large=TI-183",
+    "attempts": [
+     {
+      "rung": "ocr",
+      "raw": "183",
+      "tag": "183"
+     },
+     {
+      "rung": "vlm_small",
+      "raw": "{\"tag\": \"PI183\", \"legible\": true}",
+      "tag": "PI-183"
+     },
+     {
+      "rung": "vlm_large",
+      "raw": "{\"tag\": \"TI-183\", \"legible\": true}",
+      "tag": "TI-183"
+     }
+    ]
+   }
+  ]
+ }
+]
