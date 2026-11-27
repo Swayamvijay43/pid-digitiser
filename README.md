@@ -8,14 +8,14 @@ pass. Everything else goes to a human review queue.
 
 ```mermaid
 flowchart LR
-    PDF[PDF: vector or scan] --> S[1 - Scan agent<br/>PyMuPDF render, Hough deskew,<br/>denoise, text layer or tiled OCR]
-    S --> D[2a - Detect agent<br/>YOLO11n on 640px tiles<br/>+ custom cross-tile NMS]
-    D -- "Send() fan-out,<br/>one branch per symbol" --> R[2b - Tag agent<br/>escalation ladder]
-    R --> C[Validate node<br/>sheet-level checks:<br/>tag uniqueness]
-    C --> V{Review node<br/>interrupt()}
-    V -- low confidence --> H[TypeScript review dashboard<br/>bbox overlays, crops, corrections]
+    PDF["PDF: vector or scan"] --> S["1 - Scan agent<br/>PyMuPDF render, Hough deskew,<br/>denoise, text layer or tiled OCR"]
+    S --> D["2a - Detect agent<br/>YOLO11n on 640px tiles<br/>+ custom cross-tile NMS"]
+    D -- "Send() fan-out,<br/>one branch per symbol" --> R["2b - Tag agent<br/>escalation ladder"]
+    R --> C["Validate node<br/>sheet-level checks:<br/>tag uniqueness"]
+    C --> V{"Review node<br/>interrupt()"}
+    V -- "low confidence" --> H["TypeScript review dashboard<br/>bbox overlays, crops, corrections"]
     H -- "Command(resume=decisions)" --> V
-    V --> E[3 - Generate agent<br/>MTO CSV, instrument index,<br/>equipment list, line list]
+    V --> E["3 - Generate agent<br/>MTO CSV, instrument index,<br/>equipment list, line list"]
 ```
 
 ## Why it is built this way
